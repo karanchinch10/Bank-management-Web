@@ -1,7 +1,10 @@
+#crate database
 create database account;
 
+#use database
 use account;
 
+#create table inside database
 create table customer(id int(10) unique auto_increment primary key,
 ename varchar(50) not null,
 passw varchar(50) not null,
@@ -15,4 +18,6 @@ balance decimal(10,2) not null,
 gender varchar(50) not null, 
 state varchar(50) not null );
 
+
+#access or view database
 select * from customer
