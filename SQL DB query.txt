@@ -1,0 +1,18 @@
+create database account;
+
+use account;
+
+create table customer(id int(10) unique auto_increment primary key,
+ename varchar(50) not null,
+passw varchar(50) not null,
+email varchar(50) not null unique,
+mob int(10) not null unique,
+age int(10) not null,
+address varchar(50) not null,
+branch varchar(50) not null,
+adharno int(10) not null unique,
+balance decimal(10,2) not null, 
+gender varchar(50) not null, 
+state varchar(50) not null );
+
+select * from customer
