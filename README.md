@@ -12,6 +12,6 @@
 - User can Login and Logout their account anytime
 - Technical tools or library used -- <code>Python,Flask,MySql Database,XAMPP,html,CSS</code>
 - 
-  -  <a href="https://drive.google.com/file/d/1OWEpEZOMQLKn9l1bylQrqw8NeEoizxoF/view?usp=sharing">View Project Report</a> 💝
+  -  👉<a href="https://drive.google.com/file/d/1OWEpEZOMQLKn9l1bylQrqw8NeEoizxoF/view?usp=sharing">View Project Report</a> 💝
   -  👉<a href="#">View On Github</a> 💝
 
