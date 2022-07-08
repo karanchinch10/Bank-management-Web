@@ -3,7 +3,7 @@
 - I have made this flask project of bank management web application system
 - Front end was created by HTML and CSS without use of bootstrap
 - Project is specially designed for customer/bank holder to get all basic bank services
-- First customer has to open their bank account by filling basic bank details such as Name, Password, DOB, mob no, Initial Deposit and register their bank account 
+- First customer has to open their bank account by filling basic bank details which includes Name, Password, DOB, mob no, Initial Deposit and register their bank account 
 - Once account has  been created then they can login with their user ID and password
 - User can view and modify their personal details from profile section 
 - User can withdraw, credit money into their account
