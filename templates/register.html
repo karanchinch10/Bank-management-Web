@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{ text-align: center; background-repeat: no-repeat; background-size: cover;}
+        
+        form {
+            display: inline-block;
+        }
+        table td {
+            padding: 7px;
+        
+
+        }
+        label {
+            font-size: larger;
+            font-weight: bold;
+        }
+        .welcome {
+            color: rgb(7, 0, 100);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        #register_0 { height: 40px;
+            background-color: rgb(2, 12, 34);
+            font-size: large;
+            color: rgb(255, 255, 255);
+            width: 130px;
+            border-radius: auto;
+            border-color: yellow;
+
+        }
+        #register_0:hover {
+            color: yellow;
+        }
+        .abcdef { height: 40px; background-color: rgb(231, 224, 216); }
+        .abcdef:hover { color: rgb(54, 76, 243); border-radius: auto;}
+        
+       
+   
+    </style>
+</head>
+<body style="background-image: url('https://img.freepik.com/free-vector/bank-workers-providing-service-clients_74855-4365.jpg?t=st=1654628159~exp=1654628759~hmac=71ef6509f346fe2115c66d22732d884ab1015df440a951670540789fd8e81931&w=1380.jpg');">
+    <h1 style="text-align: center;" class="welcome"><b>SBI Bank Resistration Form</b></h1>
+    
+    <form action="{{url_for('register')}}" method="post">  
+        <table class="vm">  
+        <tr>  
+            <td class="tdLabel"><label for="register_name" class="label">Name:</label></td>  
+            <td><input type="text" name="ename" value="" id="register_name"  required style="width:160px"/></td>
+        </tr>  
+        <tr>  
+            <td class="tdLabel"><label for="register_pass" class="label">Password:</label></td>  
+            <td><input type="password" name="password" value="" id="register_pass"  required style="width:160px"/></td>  
+        </tr>  
+        <tr>  
+            <td class="tdLabel"><label for="register_email" class="label">Email-ID:</label></td>  
+            <td><input type="email" name="email" value="" id="register_email" required style="width:160px"/></td>  
+        </tr> 
+        <tr>  
+            <td class="tdLabel"><label for="register_mob" class="label">Mob-No:</label></td>  
+            <td><input type="text" name="mob" value="" id="register_mob" required style="width:160px"/></td>  
+        </tr> 
+        <tr>  
+            <td class="tdLabel"><label for="register_age" class="label">Age:</label></td>  
+            <td><input type="text" name="age" value="" id="register_age" required style="width:160px"/></td>  
+        </tr> 
+        <tr>  
+            <td class="tdLabel"><label for="register_address" class="label">Address:</label></td>  
+            <td><input type="text" name="address" id="register_address" required style="width:160px"/></td>  
+        </tr>  
+        <tr>  
+            <td class="tdLabel"><label for="register_branch" class="label">Branch:</label></td>  
+            <td><input type="text" name="branch" value="" id="register_branch" required style="width:160px"/></td>  
+        </tr>  
+        <tr>  
+            <td class="tdLabel"><label for="register_adharno" class="label">AdharNo:</label></td>  
+            <td><input type="text" name="adharno" value="" id="register_adharno" required style="width:160px"/></td>  
+        </tr>  
+        <tr>  
+            <td class="tdLabel"><label for="register_ideposit" class="label">Intial Deposit Amount(RS):</label></td>  
+            <td><input type="text" name="balance" value="" id="register_ideposit" required style="width:160px"/></td>  
+        </tr>  
+        <tr>  
+            <td class="tdLabel"><label for="register_gender" class="label">Enter Gender:</label></td>  
+            <td>  
+        <input type="radio" name="gender" id="register_gendermale" value="male"/>  
+        <label for="register_gendermale">male</label>  
+        <input type="radio" name="gender" id="register_genderfemale" value="female"/>  
+        <label for="register_genderfemale">female</label>  
+            </td>  
+        </tr>  
+        <tr>  
+            <td class="tdLabel"><label for="register_state" class="label">State:</label></td>   
+            <td><select name="state" id="register_state" required style="width:160px">  
+            <option value="maharashtra">maharashtra</option>  
+            <option value="mp">mp</option>  
+            <option value="panjab">panjab</option>  
+            <option value="kolkata">kolkata</option>  
+            <option value="up">up</option>  </select>  </td> 
+        </tr> 
+        <br>
+        <tr>  
+            <p>{{msg}}</p><br>
+            <td colspan="5"><div><br><br><input type="submit"  id="register_0" value="Register"/>  </div></td>  
+        </tr> 
+        
+        </table>  
+        </form>
+    
+        <p><a style="color: black;" target="_blank" href="{{url_for('login')}}"><button type="button" class="abcdef" > <b>Back to Login</b> </button></a></p>
+
+        <h4 style="color: rgb(0, 0, 0)">Note : Fill Above details to Create New Account</h4>
+    
+</body>
+</html>

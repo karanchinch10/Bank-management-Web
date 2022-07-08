@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+li a { display: block; color: white; text-align: center; padding: 16px; text-decoration: none; background-color: black;}
+ul { list-style: none; margin: 0; padding: 0; overflow: hidden; background-color: black; }
+li { float: left;}
+li a:hover { background-color: crimson; }
+h1 {text-align: center; color: gold; font-family: 'Times New Roman', Times, serif; font-weight: bold;}
+body{ background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-image: url(https://wallpaperaccess.com/full/1567674.jpg)  ;}
+
+.abcd { width: 100px; height: 50px; text-align: center; background-color: brown; } 
+div,button {text-align: center; font-size: large; border-radius: 1px; color: black; }
+button:hover {background-color: tomato; }
+h2 { text-align: center; }
+
+
+
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+th{
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 12px;
+  color: black;
+  background-color: deeppink;
+}
+
+td{
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 10px;
+  color: black;
+  background-color: lightpink;
+}
+
+
+
+</style>
+</head>
+
+
+
+<body >
+
+
+  <ul>
+    <li ><a href="{{url_for('login')}}">Home</a></li>
+    <li ><a href="{{url_for('info')}}">Profile</a></li>
+    <li ><a href="https://www.google.com">About</a></li>
+    <li style="text-align: right;" ><a href="{{url_for('logout')}}">LogOut</a></li>
+</ul>
+<br>
+<h1>Personal Information</h1><br><br>
+
+<h2 style="color: red;">{{msg}}</h2><br>
+<form action="{{url_for('update')}}" method="post">
+
+    <table style="width: 40%;",>
+        <tr>
+          <th><b>Key</b></th>
+          <th><b>Value</b></th>
+          
+        </tr>
+        <tr>
+          <td> <label for="register_name">Name</label> </td>
+          <td><input type="text" name="ename" value="{{a[1]}}" id="register_name" ></td>
+          
+        </tr>
+       
+        <tr>
+          <td> <label for="register_Email">Email</label> </td>
+          <td><input type="text" name="email" value="{{a[3]}}" id="register_Email" ></td>
+          
+        </tr>
+        <tr>
+          <td> <label for="register_Mob">Mob</label> </td>
+          <td><input type="text" name="mob" value="{{a[4]}}" id="register_Mob" ></td>
+          
+        </tr>
+        <tr>
+          <td> <label for="register_Age">Age</label> </td>
+          <td><input type="text" name="age" value="{{a[5]}}" id="register_Age" ></td>
+          
+        </tr>
+       <tr>
+          <td> <label for="register_Address">Address</label> </td>
+          <td><input type="text" name="address" value="{{a[6]}}" id="register_Address" ></td>
+          
+        </tr>
+        <input type="hidden" name="eid" value="{{a[0]}}"  >
+
+
+
+
+
+        <div> 
+             <input type="submit" id="register_0" value="Submit"/>  <br><br>
+             <a style="font-size: x-large;" href="{{url_for('login')}}">  <button type="button" class="abcd"  > Back </button> </a>
+        </div>
+
+
+        
+      
+      </table>
+
+
+
+</form>
+
+
+<br><br>
+
+
+</body>
+</html>

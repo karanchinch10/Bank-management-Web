@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+    <style>
+    li a { display: block; color: white; text-align: center; padding: 16px; text-decoration: none; background-color: black;}
+    ul { list-style: none; margin: 0; padding: 0; overflow: hidden; background-color: black; }
+    li { float: left;}
+    li a:hover { background-color: crimson; }
+    h1 { color: orange; font-family: 'Times New Roman', Times, serif; text-align: center;}
+    #abc{ color: wheat; }
+    body{ background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-image: url(https://wallpaperaccess.com/full/1567674.jpg)  ;}
+    .mnop {color: wheat; font-size: medium; text-align: center;} 
+    div,button {text-align: center;}
+    .bann { padding: 8px; width: 200px; }
+    .submit1 { width: 100px; font-size: large; background-color: orangered; }
+    
+    
+
+    
+
+
+    </style>
+</head>
+<body> 
+    
+    <ul>
+        <li ><a href="{{url_for('login')}}">Home</a></li>
+        <li ><a href="{{url_for('info')}}">Profile</a></li>
+        <li ><a href="https://www.google.com">Form</a></li>
+        <li style="text-align: right;" ><a href="{{url_for('logout')}}">LogOut</a></li>
+    </ul>
+    <br><br><br>
+    <h1 style="font-size: 40px;"> Withdraw Form</h1><br>
+    
+
+
+
+    <form class="mnop" action="{{url_for('withdraw')}}" method="post"  >
+        <h2 style="color: red;">{{msg}}</h2><br>
+
+        <label for="withdrawamount" style="font-size: 20px;"><b>Withdraw Amount*</b></label><br><br>
+        <input class="bann" type="text" id="withdrawamount" name="withdraw"  placeholder="Enter Amount to Withdraw"  required><br><br>
+
+        <label for="ename" style="font-size: 20px;"><b>Name*</b></label><br><br>
+        <input class="bann" type="text" id="ename" name="ename"  placeholder="Enter your Name" required><br><br>
+
+        <label for="lname" style="font-size: 20px;"><b>Password*</b></label><br><br>
+        <input class="bann" id="lname" type="password" name="password" placeholder="Enter Password" required><br><br><br>
+
+        
+
+        <input class="submit1"  style="height: 50px;" type="submit" value="Confirm"><br><br>
+
+
+        
+    </form>
+    
+    
+
+</body>
+</html>

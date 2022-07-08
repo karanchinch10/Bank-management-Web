@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{ text-align: center; }
+    
+    form {
+        display: inline-block;
+    }
+    label {
+        font-size: larger;
+        font-weight: bold;
+    }
+    .mainpage {
+        font-size: xx-large;
+        color: rgb(1, 2, 53);
+    }
+    #ename { 
+        width: 200px;
+    }
+    #lname { 
+        width: 200px;
+    }
+    .login {
+        height: 30px;
+        width: 130px;
+        text-align: center;
+        background-color: rgb(65, 2, 2);
+        color: white;
+        font-weight: bold;
+        border-color: yellow;
+    }
+    .login:hover {
+        color: rgb(240, 240, 33);
+    }
+    .abcdef { height: 30px; background-color: rgb(65, 2, 2); color: white; border-color: yellow;}
+    .abcdef:hover { color: rgb(236, 234, 93); }
+
+    </style>
+    
+</head>
+
+<body style="background-image: url('https://img.freepik.com/free-photo/aesthetic-wallpaper-pink-smoke-background_53876-133410.jpg?t=st=1654614400~exp=1654615000~hmac=079d5d0b6e9f1866f1c528b125b9bf70746b2381980864c7aa0e209535b600e5&w=1060.jpg');">
+    <h2 style="text-align: center" class="mainpage">State Bank of India Login</h2><br>
+    
+    <form action="{{url_for('login')}}" method="post" style="text-align: justify;" >
+        
+        <label for="ename"><b>Name *</b></label><br><br>
+        <input type="text" id="ename" name="ename"  placeholder="Enter Name" required required style="height:20px"><br><br>
+
+        <label for="lname"><b>Password *</b></label><br><br>
+        <input id="lname" type="password" name="password" placeholder="Enter Password" required required style="height:20px"><br>
+
+        <p><a style="color: black;" href="{{url_for('changepassword')}}">Forgot Password</a></p>
+        
+
+
+
+        <input type="submit" value="Login" class="login"><br><br>
+
+        <p>{{msg}}</p>
+        <p>Not a member? <br><br><a style="color: blue;" href="{{url_for('register')}}"><button type="button" class="abcdef" > <b>Create New Account</b> </button></a></p>
+
+
+    </form>
+    
+    
+</body>
+</html>
+

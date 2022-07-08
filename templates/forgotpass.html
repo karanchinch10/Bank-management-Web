@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{ text-align: center; }
+    
+    form {
+            display: inline-block;
+        }
+    .pass { color: rgb(2, 2, 36);
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        color: rgb(21, 2, 90);
+
+    }
+    #ename { 
+        width: 200px;
+        height: 20px;
+    }
+    #lname { 
+        width: 200px;
+        height: 20px;
+    }
+    #nam { 
+        width: 200px;
+        height: 20px;
+    }
+    .change {
+        color: rgb(255, 255, 255);
+        background-color: rgb(26, 3, 37);
+        height: 25px;
+
+    }
+    .change:hover {
+        color: rgb(245, 242, 84);
+
+    }
+    </style>
+</head>
+<body style="background-color: rgb(201, 193, 207);">
+    <br>
+    <h2 class="pass">Update Your Password</h2>
+    <br>
+    <form action="{{url_for('changepassword')}}" method="post" style="text-align: justify;" >
+        
+        <label for="ename"><b>Confirm Name:</b></label><br><br>
+        <input type="text" id="ename" name="ename"  placeholder="confirm name" required><br><br>
+
+        <label for="nam"><b>Confirm Email:</b></label><br><br>
+        <input type="text" id="nam" name="email" placeholder="confirm email"   required><br><br>
+
+        <label for="lname"><b>New Pawword:</b></label><br><br>
+        <input id="lname" type="password" name="npassword" placeholder="New passowrd"  required><br><br>
+
+        <p style="color: gold;">{{msg}}</p>
+
+        <input type="submit" class="change" value="Change Password"><br>
+        <p><a style="color: black;" href="{{url_for('login')}}">Back to Login</a></p>
+         
+
+    </form>
+    <h4 style="color: rgb(94, 0, 0)">Note : verify your name and email to update password</h4>
+</body>
+</html>

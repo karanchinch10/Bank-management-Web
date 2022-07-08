@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: blueviolet;">
+    <h2>Registeration Form</h2>
+    <form action="{{url_for('register')}}" method ='POST' style="text-align: justify;" >
+
+        <label for="name"><b>Name</b></label><br><br>
+        <input id="name" type="text" name="ename" required><br><br>
+
+        <label for="name"><b>LastName</b></label><br><br>
+        <input id="name" type="text" name="ename" required><br><br>
+
+        <label for="name"><b>Age</b></label><br><br>
+        <input id="name" type="text" name="ename" required><br><br>
+
+        <label for="name"><b>Sex</b></label><br><br>
+        <input id="name" type="text" name="ename" required><br><br>
+
+        <label for="pass"><b>Address</b></label><br><br>
+        <input type="text" id="pass" name="epassword"  required><br><br>
+
+        <label for="email"><b>Branch</b></label><br><br>
+        <input id="email" type="email" name="email" required><br><br>
+
+        <label for="mob"><b>AdharNo</b></label><br><br>
+        <input id="mob" type="text" name="mob"  required><br><br>
+        
+        <input type="submit" value="Create"><br>
+        
+    </form>
+    
+</body>
+</html>
